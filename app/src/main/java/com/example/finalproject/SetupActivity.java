@@ -19,6 +19,7 @@ public class SetupActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<String> defaultNames = new ArrayList<String>();
+    private ArrayList<String> labels = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //Set up stuff
@@ -40,6 +41,44 @@ public class SetupActivity extends AppCompatActivity {
         defaultNames.add("10");
         defaultNames.add("11");
         defaultNames.add("12");
+        defaultNames.add("13");
+        defaultNames.add("14");
+        defaultNames.add("15");
+        defaultNames.add("16");
+        defaultNames.add("17");
+        defaultNames.add("18");
+        defaultNames.add("19");
+        defaultNames.add("20");
+        defaultNames.add("21");
+        defaultNames.add("22");
+        defaultNames.add("23");
+        defaultNames.add("24");
+
+
+        labels.add("District 1a");
+        labels.add("District 1b");
+        labels.add("District 2a");
+        labels.add("District 2b");
+        labels.add("District 3a");
+        labels.add("District 3b");
+        labels.add("District 4a");
+        labels.add("District 4b");
+        labels.add("District 5a");
+        labels.add("District 5b");
+        labels.add("District 6a");
+        labels.add("District 6b");
+        labels.add("District 7a");
+        labels.add("District 7b");
+        labels.add("District 8a");
+        labels.add("District 8b");
+        labels.add("District 9a");
+        labels.add("District 9b");
+        labels.add("District 10a");
+        labels.add("District 10b");
+        labels.add("District 11a");
+        labels.add("District 11b");
+        labels.add("District 12a");
+        labels.add("District 12b");
 
 
         //Set up RecyclerView
@@ -49,7 +88,7 @@ public class SetupActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         //Set up Adapter
-        adapter = new SetupAdapter(defaultNames);
+        adapter = new SetupAdapter(defaultNames, labels);
         recyclerView.setAdapter(adapter);
 
         //if continue button is clicked open GameActivity
