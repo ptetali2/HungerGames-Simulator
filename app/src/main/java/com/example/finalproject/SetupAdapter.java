@@ -1,14 +1,18 @@
 package com.example.finalproject;
 
 import androidx.recyclerview.widget.RecyclerView;
-
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.content.Intent;
 
 import java.util.ArrayList;
+
 
 public class SetupAdapter extends RecyclerView.Adapter<SetupAdapter.MyViewHolder> {
     //all the users names
@@ -40,7 +44,30 @@ public class SetupAdapter extends RecyclerView.Adapter<SetupAdapter.MyViewHolder
     public void onBindViewHolder(MyViewHolder holder, int position) {
         holder.editText.setText(names.get(position));
         holder.textView.setText(labels.get(position));
+        holder.editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                //blank
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                String name = s.toString().trim();
+                //update the array
+                names.set(position, name);
+                getEditedNames();
+            }
+        });
     }
+    public ArrayList<String> getEditedNames() {
+        return names;
+    }
+
     @Override
     public int getItemCount() {
         return names.size();
