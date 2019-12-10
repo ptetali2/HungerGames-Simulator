@@ -10,17 +10,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="600dp"
         android:layout_marginRight="280dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginBottom="10dp"
         android:text="Status" />
 
     <Button
         android:id="@+id/cont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="280dp"
         android:layout_marginTop="600dp"
+        android:layout_marginBottom="10dp"
         android:text="Continue" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:maxLines="999999999"
+        android:text='Click CONTINUE to start the simulation '
+        android:textColor="@color/cardview_light_background" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="288dp"
+        android:layout_marginLeft="288dp"
+        android:layout_marginBottom="10dp"
+        android:text="Home" />
 
 </RelativeLayout>
